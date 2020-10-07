@@ -1,0 +1,228 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(250, 250, 250);
+}
+
+#main {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    justify-content: center;
+}
+
+#screenshot {
+    height: 618px;
+    width: 414px;
+    background-image: url('assets/phone.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#rightside {
+    margin-top: 35px;
+}
+
+.container {
+    display: block;
+    background-color: white;
+    width: 255px;
+    border: 1px solid lightgrey;
+    padding: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.container a {
+    display: block;
+}
+
+.container p {
+    display: inline;
+}
+
+.container h1 {
+    width: 175px;
+    height: 51px;
+    background-image: url('assets/title.png');
+    background-position-y: -130px;
+    
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 36px;
+
+    /* Hide the text. */
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+input {
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    padding: 10px;
+    width: 255px;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    font-size: 12px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+#login {
+    margin: auto;
+    margin-top: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 255px;
+
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(178, 223, 252);
+}
+
+#or {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+#or-left {
+    padding: 10px;
+}
+
+#or-right {
+    padding: 10px;
+}
+
+#or-text {
+    color: rgb(142, 142, 142);
+    font-family: "Segoe UI", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#facebook {
+    margin: 12px;
+    border: none;
+    background-color: white;
+}
+
+#facebook-icon {
+    background-image: url('assets/title.png');
+    background-position-x: -414px;
+    background-position-y: -259px;
+
+    display: inline-block;
+    min-height: 16px;
+    min-width: 16px;
+}
+
+#facebook-text {
+    color: #385185;
+    font-size: 14px;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
+}
+
+#forgot {
+    text-decoration: none;
+    color: rgb(0, 55, 107);
+    font-family: "Segoe UI", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 12px;
+}
+
+.line {
+    background-color: rgb(219, 219, 219);
+    height: 2px;
+    width: 100px;
+}
+
+#new-account {
+    margin: 12px;
+}
+
+#signup {
+    display: inline;
+    text-decoration: none;
+    color: rgb(0, 149, 246);
+    font-weight: 600;
+}
+
+#getapp {
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    margin: 20px;
+}
+
+#store img {
+    height: 40px;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 40px;
+    max-width: 1200px;
+}
+
+#links {
+    display: flex;
+}
+
+footer a {
+    color: rgb(0, 55, 107);
+    margin-right: 16px;
+    margin-bottom: 7px;
+    font-size: 12px;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#copyright {
+    color: rgb(160, 160, 160);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+    text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+    #screenshot {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    #copyright {
+        float: left;
+    }
+    #links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer {
+        justify-content: center;
+    }
+}
