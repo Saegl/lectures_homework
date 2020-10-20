@@ -1,0 +1,36 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+#move {
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#board {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 600px;
+    font-size: 50px;
+}
+
+#board-line {
+    display: flex;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    margin-top: 15px;
+    background-color: aqua;
+}
