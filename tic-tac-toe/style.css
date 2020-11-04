@@ -1,36 +1,78 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
 }
 
 h1 {
-    font-size: 70px;
+  font-size: 70px;
+}
+
+#dropbtn {
+  background-color: rgb(253, 81, 69);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  min-width: 160px;
+  border: none;
+  left: 0;
+  right: 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: rgba(151, 21, 21, 0.925);
 }
 
 #move {
-    font-size: 25px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #board {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    max-width: 600px;
-    font-size: 50px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-width: 600px;
+  font-size: 50px;
 }
 
 #board-line {
-    display: flex;
+  display: flex;
 }
 
 .cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    margin: 10px;
-    margin-top: 15px;
-    background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  margin: 10px;
+  margin-top: 15px;
+  background-color: aqua;
 }
