@@ -123,11 +123,8 @@ function times(s, x) {
     return resp;
 }
 
-let h = 0;
-
 function maxi(board) {
     if (isGameEnded(board)) {
-        h += 1;
         return boardeval(board);
     }
     let legalmoves = availableMoves(board)
@@ -144,7 +141,6 @@ function maxi(board) {
 
 function mini(board) {
     if (isGameEnded(board)) {
-        h += 1;
         return boardeval(board);
     }
     let legalmoves = availableMoves(board)

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- flickity carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="to-top" title="Go to top">Top</button>
+    <div id="home">
+        <a name="home"></a>
+        <div id="home-content">
+            <div class="container">
+                <div id="left-column">
+                    <div class="line"></div>
+                    <h1>An Amazing App That Does It All.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button>Get the app</button>
+                </div>
+                <div id="right-column">
+                    <div class="empty">&nbsp</div>
+                    <div id="woman" class="hidden-on-mobile"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="./img/logo.svg" alt="logo">
+                <h1 class="logo">My Logo</h1>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#works-anchor">Works</a>
+                <a href="#features">Features</a>
+                <a href="#pricing-anchor">Plans</a>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div id="about">
+            <div class="container col center">
+                <div class="text-block">
+                    <h2>
+                        The most popular app. <br> 7 billion downloads
+                    </h2>
+                    <p>
+                        Everyone have already downloaded this application, <br> you are the only who doesn't.
+                    </p>
+                </div>
+                <div id="carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "groupCells": 2, "autoPlay": true, "prevNextButtons": false }'>
+                    <div class="carousel-card">
+                        <h3>User-friendly</h3>
+                        <p class="secondary-text-white">Lorem ipsum dolor sit amet. Dicta, amet eius. Necessitatibus
+                            esse iusto quod neque? Dicta doloremque recusandae</p>
+                    </div>
+                    <div class="carousel-card">
+                        <h3>Smart</h3>
+                        <p class="secondary-text-white">Lorem ipsum dolor sit amet. Dicta, amet eius. Necessitatibus
+                            esse iusto quod neque? Dicta doloremque recusandae</p>
+                    </div>
+                    <div class="carousel-card">
+                        <h3>Powerful</h3>
+                        <p class="secondary-text-white">Lorem ipsum dolor sit amet. Dicta, amet eius. Necessitatibus
+                            esse iusto quod neque? Dicta doloremque recusandae</p>
+                    </div>
+                </div>
+                <div id="app-screen"></div>
+            </div>
+        </div>
+        <a name="works-anchor"></a>
+        <div id="works" class="col container center">
+            <h2>How the app works?</h2>
+            <p class="secondary-text">Actually, we don't know (app doesn't even exists)</p>
+            <div id="steps">
+                <div class="step">
+                    <div class="circle">1</div>
+                    <h3>Tap</h3>
+                    <p class="secondary-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quaera
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="circle">2</div>
+                    <h3>Tap Again</h3>
+                    <p class="secondary-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quaera
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="circle">3</div>
+                    <h3>Wait</h3>
+                    <p class="secondary-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quaera
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="circle">4</div>
+                    <h3>Magic Happen</h3>
+                    <p class="secondary-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quaera
+                    </p>
+                </div>
+            </div>
+            <div id="phone-screens"></div>
+        </div>
+        <div id="features">
+            <div class="container col center">
+                <h2>Features You Would Surely Love.</h2>
+                <p class="secondary-text">And they are not implemented yet. <br> Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Accusamus <br> rerum impedit temporibus lab Lorem ipsum dolor, sit amet
+                    consectetur <br> adipisicing elit. Maiores modi deleniti molestias incidunt, <br> assumenda quisquam
+                </p>
+                <div class="line"></div>
+                <div id="features-list">
+                    <div class="feature-item">
+                        <div id="icon-cloud" class="icon"></div>
+                        <div class="feature-text">
+                            <h3>Cloud Based</h3>
+                            <p class="secondary-text">Nemo cupiditate ab quibusdam quaerat <br> impedit magni. Earum suscipit
+                                ipsum laudantium. Quo <br> delectus est. Maiores voluptas ab sit natus</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div id="icon-video" class="icon"></div>
+                        <div class="feature-text">
+                            <h3>Voice & Video</h3>
+                            <p class="secondary-text">Nemo cupiditate ab quibusdam quaerat <br> impedit magni. Earum suscipit
+                                ipsum laudantium. Quo <br> delectus est. Maiores voluptas ab sit natus</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div id="icon-secure" class="icon"></div>
+                        <div class="feature-text">
+                            <h3>Always Secure</h3>
+                            <p class="secondary-text">Nemo cupiditate ab quibusdam quaerat <br> impedit magni. Earum suscipit
+                                ipsum laudantium. Quo <br> delectus est. Maiores voluptas ab sit natus</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div id="icon-games" class="icon"></div>
+                        <div class="feature-text">
+                            <h3>Play Games</h3>
+                            <p class="secondary-text">Nemo cupiditate ab quibusdam quaerat <br> impedit magni. Earum suscipit
+                                ipsum laudantium. Quo <br> delectus est. Maiores voluptas ab sit natus</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div id="icon-chat" class="icon"></div>
+                        <div class="feature-text">
+                            <h3>Group Chat</h3>
+                            <p class="secondary-text">Nemo cupiditate ab quibusdam quaerat <br> impedit magni. Earum suscipit
+                                ipsum laudantium. Quo <br> delectus est. Maiores voluptas ab sit natus</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div id="icon-payments" class="icon"></div>
+                        <div class="feature-text">
+                            <h3>Payments</h3>
+                            <p class="secondary-text">Nemo cupiditate ab quibusdam quaerat <br> impedit magni. Earum suscipit
+                                ipsum laudantium. Quo <br> delectus est. Maiores voluptas ab sit natus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <h2>7 billions can't be wrong</h2>
+                <div class="people" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "groupCells": 2, "autoPlay": true }'>
+                    <div class="human">
+                        <div id="man1" class="avatar"></div>
+                        <div class="comment">
+                            <p><span class="login">Linux Tor</span> @LinuxTor</p>
+                            <p>Wonderful app!</p>
+                        </div>
+                    </div>
+                    <div class="human">
+                        <div id="man2" class="avatar"></div>
+                        <div class="comment">
+                            <p><span class="login">Bjarne</span> @AnimalIsAlive</p>
+                            <p>Awesome</p>
+                        </div>
+                    </div>
+                    <div class="human">
+                        <div id="man3" class="avatar"></div>
+                        <div class="comment">
+                            <p><span class="login">Bill Rich</span> @Microsite</p>
+                            <p>I love it</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a name="pricing-anchor"></a>
+        <div id="pricing" class="container col center">
+            <h2>Our Easy Pricing Plans <br> For Everyone.</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Reiciendis molestias, aperiam iste illo amet dolore soluta quos veritatis dolorem ullam, <br> incidunt modi eligendi nostrum odit voluptates velit. Magni, ab fuga?</p>
+            <div class="plan-list center">
+                <div class="plan-item">
+                    <p>Basic</p>
+                    <h2>Free</h2>
+                    <ul>
+                        <li><span>5GB Storage</span></li>
+                        <li><span>10GB Bandwidth</span></li>
+                        <li><span>5 Databases</span></li>
+                        <li><span>30 Email Accounts</span></li>
+                    </ul>
+                    <button>GET STARTED</button>
+                </div>
+                <div class="plan-item plan-item-pro">
+                    <p style="color: white;">Pro Plan</p>
+                    <h2 class="pro-white">$10</h2>
+                    <ul>
+                        <li><span style="color: white;">500GB Storage</span></li>
+                        <li><span style="color: white;">Unlimited Bandwidth</span></li>
+                        <li><span style="color: white;">50 Databases</span></li>
+                        <li><span style="color: white;">50 Email Accounts</span></li>
+                    </ul>
+                    <button id="pro">GET STARTED</button>
+                </div>
+                <div class="plan-item">
+                    <p>Ultimate Plan</p>
+                    <h2>$20</h2>
+                    <ul>
+                        <li><span>1TB Storage</span></li>
+                        <li><span>Unlimited Bandwidth</span></li>
+                        <li><span>100 Databases</span></li>
+                        <li><span>100 Email Accounts</span></li>
+                    </ul>
+                    <button>GET STARTED</button>
+                </div>
+            </div>
+        </div>
+        <div id="downloads">
+            <div class="container">
+                <div class="two-rows reverse-wrap">
+                    <div id="phone" class="hidden-on-mobile"></div>
+                    <div class="row-block">
+                        <h3>Download The App Now!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere hic dolore eveniet inventore, quam, dolor, nihil sit necessitatibus aliquam quas illum non mollitia ullam autem dolorem explicabo aspernatur fugit soluta!</p>
+                        <div id="download-links">
+                            <div class="appstore"></div>
+                            <div class="google-play"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="container col">
+            <div class="two-rows">
+                <div class="row-block">
+                    <h3>Let's Stay In Touch.</h3>
+                    <p class="small-text">Subscribe for updates, special offers and more.</p>
+                </div>
+                <div class="row-block">
+                    <input type="text" placeholder="Email Address">
+                    <button id="input-button">Send</button>
+                </div>
+            </div>
+            <div class="white-line"></div>
+            <div class="two-rows">
+                <div class="row-block">
+                    <h4>My Company</h4>
+                    <p class="small-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia id qui eos culpa dignissimos facilis minus mollitia corporis architecto odit et doloribus quam enim at, assumenda ut illo ipsa!</p>
+                </div>
+                <div class="row-block">
+                    <div class="links">
+                        <a href="">Home</a>
+                        <a href="">Another link</a>
+                        <a href="">One more</a>
+                    </div>
+                    <p class="small-text">Do you have a question? Send me a word:</p>
+                    <a href="">190103497@stu.sdu.edu.kz</a>
+                    <p class="small-text">Copyright ©2020 Alisher Zhubanyshev </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
