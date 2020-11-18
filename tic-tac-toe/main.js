@@ -5,14 +5,29 @@ const aiMode = 0;
 const twoPlayerMode = 1;
 let btnmode = document.getElementById("dropbtn");
 
+function reload() {
+    if (moveCount == 0) return;
+    moveCount = 0;
+    cellValues = [
+        0, 0, 0,
+        0, 0, 0,
+        0, 0, 0,
+    ];
+    for (let i = 0; i < 9; i++) {
+        cells[i].innerHTML = '';
+    }
+}
+
 function aimode() {
     mode = aiMode;
-    btnmode.innerHTML = 'Play against AI'
+    btnmode.innerHTML = 'Play against AI';
+    reload();
 }
 
 function twoplayersmode() {
     mode = twoPlayerMode;
-    btnmode.innerHTML = 'Two players game'
+    btnmode.innerHTML = 'Two players game';
+    reload();
 }
 
 let cellValues = [
@@ -123,23 +138,29 @@ function times(s, x) {
     return resp;
 }
 
-function maxi(board) {
+function maxi(board, depth) {
+    if (depth > 1) {
+        return 0;
+    }
     if (isGameEnded(board)) {
         return boardeval(board);
     }
-    let legalmoves = availableMoves(board)
+    let legalmoves = availableMoves(board);
     let bestmove = -10;
 
     for (let i = 0; i < legalmoves.length; i++) {
         let move = legalmoves[i];
         board[move] = 1; // Make move
-        bestmove = Math.max(bestmove, mini(board));
+        bestmove = Math.max(bestmove, mini(board, depth + 1));
         board[move] = 0; // Unmake move
     }
     return bestmove;
 }
 
-function mini(board) {
+function mini(board, depth) {
+    if (depth > 1) {
+        return 0;
+    }
     if (isGameEnded(board)) {
         return boardeval(board);
     }
@@ -149,7 +170,7 @@ function mini(board) {
     for (let i = 0; i < legalmoves.length; i++) {
         let move = legalmoves[i];
         board[move] = -1; // Make move
-        bestmove = Math.min(bestmove, maxi(board));
+        bestmove = Math.min(bestmove, maxi(board, depth + 1));
         board[move] = 0; // Unmake move
     }
     return bestmove;
@@ -164,14 +185,12 @@ function aimakemove(movenumber) {
 
     for (let j = 0; j < legalmoves.length; j++) {
         let move = legalmoves[j];
-        
-        console.log(move);
 
         cellValues[move] = -1;
-        let neweval = maxi(cellValues, movenumber, 0);
+        let neweval = maxi(cellValues, 0);
         cellValues[move] = 0;
 
-        console.log("move evaluation " + neweval);
+        console.log(move + " move evaluation: " + neweval);
 
         if (neweval <= besteval) {
             besteval = neweval;
@@ -203,8 +222,10 @@ for (let i = 0; i < cells.length; i++) {
             side2move = true;
         }
 
-        aimakemove(moveCount);
-        moveCount++;
+        if (mode == aiMode) {
+            aimakemove(moveCount);
+            moveCount++;
+        }
         
         updateLabel();
     });
