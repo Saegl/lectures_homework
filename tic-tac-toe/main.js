@@ -13,6 +13,7 @@ function reload() {
         0, 0, 0,
         0, 0, 0,
     ];
+    move.innerHTML = "X to move";
     for (let i = 0; i < 9; i++) {
         cells[i].innerHTML = '';
     }
@@ -96,6 +97,11 @@ function updateLabel() {
     if (checkWin(cellValues, -1)) {
         move.innerHTML = "O is win ";
         addReloadButton(move);
+        return;
+    }
+
+    if (moveCount == 9) {
+        move.innerHTML = "draw";
         return;
     }
 
@@ -190,8 +196,6 @@ function aimakemove(movenumber) {
         let neweval = maxi(cellValues, 0);
         cellValues[move] = 0;
 
-        console.log(move + " move evaluation: " + neweval);
-
         if (neweval <= besteval) {
             besteval = neweval;
             bestmovepos = move;
@@ -207,7 +211,9 @@ function aimakemove(movenumber) {
 for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener('click', event => {
         console.log('Button called');
+        console.log(moveCount);
         moveCount++;
+        gameEnded = checkWin(board, 1) || checkWin(board, 1) || moveCount > 9;
         if (gameEnded || cells[i].innerHTML != "") {
             return;
         }
@@ -221,11 +227,13 @@ for (let i = 0; i < cells.length; i++) {
             cellValues[i] = -1;
             side2move = true;
         }
+        updateLabel();
 
-        if (mode == aiMode) {
+        if (mode == aiMode && !gameEnded) {
             aimakemove(moveCount);
             moveCount++;
         }
+
         
         updateLabel();
     });
